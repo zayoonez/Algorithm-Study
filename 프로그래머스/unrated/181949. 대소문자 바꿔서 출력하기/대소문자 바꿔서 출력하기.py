@@ -1,3 +1,10 @@
 str = input()
+newStr = ""
 
-print(str.swapcase())
+for i in str :
+    if(i.islower()) :
+        newStr += i.upper()
+    else :
+        newStr += i.lower()
+    
+print(newStr)
