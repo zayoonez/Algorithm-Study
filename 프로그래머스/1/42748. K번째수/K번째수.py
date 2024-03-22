@@ -1,17 +1,13 @@
+# i 번째부터 j 까지 
 def solution(array, commands):
     answer = []
-    for i, j, k in commands : 
-        temp = sorted(array[i-1 : j])
-        answer.append(temp[k-1])
-    return(answer)
-
-# def solution(array, commands):
-# #     commands는 이차원 배열
-#     temp = []
-#     answer = []
-#     for i in range(len(commands)) : 
-#         num = commands[i][2]-1
-#         temp = array[commands[i][0]-1 : commands[i][1]]
-#         temp.sort()
-#         answer.append(temp[num])
-#     return(answer)
+    
+    # print(array[commands[0]-1:commands[1]-1])
+    for i in range(len(commands)) : 
+        start = commands[i][0]-1
+        end = commands[i][1]
+        idx = commands[i][2]-1
+        new = sorted(array[start:end])
+        answer.append(new[idx])
+        
+    return answer
